@@ -1,0 +1,6 @@
+if SHIELD_X04E_30BT
+
+config ZMK_KEYBOARD_NAME
+    default "X04E 30BT"
+
+endif
