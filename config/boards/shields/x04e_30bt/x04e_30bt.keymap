@@ -7,6 +7,8 @@
 
 #define SP_NM &lt LAYER_QWERTY A
 
+#define CM &cmdt PERIOD COMMA
+
 / {
 
     keymap {
@@ -14,14 +16,18 @@
 
         cmdt: comma-dot-tap {
             compatible = "zmk,behavior-hold-tap";
-            bindings = PERIOD,COMMA;
+            label = "HT-COMMA-PERIOD";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <120>;
+            bindings = <&kp>, <&kp>;
         };
 
         default_layer {
             bindings = <
             &kp Q   &kp W   &kp E   &kp R   &kp T   &kp Y   &kp U   &kp I   &kp O   &kp P
             &kp A   &kp S   &kp D   &kp F   &kp G   &kp H   &kp J   &kp K   &kp L   &kp SEMI
-            &kp Z   &kp X   &kp C   &kp V   &kp B   &kp N   &kp M   SP_NM   &cmdt   &kp FSLH
+            &kp Z   &kp X   &kp C   &kp V   &kp B   &kp N   &kp M   SP_NM   CM      &kp FSLH
             >;
         };
     };
