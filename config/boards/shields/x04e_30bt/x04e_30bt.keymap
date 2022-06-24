@@ -1,16 +1,27 @@
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+
+#define LAYER_QWERTY 0
+#define LAYER_SYM    1
+
+#define SP_NM &lt LAYER_QWERTY A
 
 / {
 
     keymap {
         compatible = "zmk,keymap";
 
+        cmdt: comma-dot-tap {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = PERIOD,COMMA;
+        };
+
         default_layer {
             bindings = <
-            &kp A   &kp A   &kp A   &kp A   &kp A   &kp A   &kp A   &kp A   &kp A   &kp A   &kp A   &kp A
-            &kp A   &kp A   &kp A   &kp A   &kp A   &kp A   &kp A   &kp A   &kp A   &kp A   &kp A   &kp A
-            &kp A   &kp A   &kp A   &kp A   &kp A   &kp A   &kp A   &kp A   &kp A   &kp A   &kp A   &kp A
+            &kp Q   &kp W   &kp E   &kp R   &kp T   &kp Y   &kp U   &kp I   &kp O   &kp P
+            &kp A   &kp S   &kp D   &kp F   &kp G   &kp H   &kp J   &kp K   &kp L   &kp SEMI
+            &kp Z   &kp X   &kp C   &kp V   &kp B   &kp N   &kp M   SP_NM   &cmdt   &kp FSLH
             >;
         };
     };
