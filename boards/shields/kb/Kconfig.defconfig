@@ -1,0 +1,6 @@
+if SHIELD_KB
+
+config ZMK_KEYBOARD_NAME
+    default "x04e Keyboard"
+
+endif
