@@ -71,7 +71,7 @@
             bindings = <
 			    /*          *           *           *           *           *          |*           *           *           *           *           */
 				&kp TAB     &mt LGUI Q  &kp W       &kp E       &kp R       &kp T       &kp Y       &kp U       &kp I       &kp O       &mt LGUI P  &kp BSPC
-				&kp ESC     &mt LALT A  &mt LCTRL S &mt LSHFT D &kp F       &kp G       &kp H       &kp J       &mt LSHFT K &mt LCTRL L &mt LALT SEMI  &kp RET
+				&mt LCTRL ESC &mt LALT A  &mt LCTRL S &mt LSHFT D &kp F       &kp G       &kp H       &kp J       &mt LSHFT K &mt LCTRL L &mt LALT SEMI  &kp RET
                 &kp LSHFT   &kp Z       &kp X       &kp C       &kp V       &kp B       &kp N       &kp M       &kp COMMA   &kp DOT     &kp SLASH   &kp DEL
                 &none       &none       &none       &none       &none       &lt LOW _SP &mo RSE     &none       &none       &none       &none       &none
             >;
